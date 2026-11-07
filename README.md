@@ -112,8 +112,8 @@
 
 ```bash
 git clone https://github.com/GoodnightXu2002/selfmedia-agent-skills.git
-cp -r skills/account-doctor ~/.agents/skills/   # 换成任意 skill 名和上表对应目录
-rm -rf skills                                   # 清理临时 clone
+cp -r selfmedia-agent-skills/account-doctor ~/.agents/skills/   # 换成任意 skill 名和上表对应目录
+rm -rf selfmedia-agent-skills                                   # 清理临时 clone
 ```
 
 想装多个就把 `cp -r` 那行重复几次。建议自媒体 5 件套(account-niche-finder / account-doctor / ai-director / benchmark-radar / content-planner)整包装,互相之间有协作引用。

@@ -165,7 +165,7 @@ description: 对话式账号定位分析。通过 5-6 轮结构化对话盘点�
 ```markdown
 # 账号定位分析报告
 
-> 生成于 <日期> ｜ 由开源 skill [account-niche-finder](https://github.com/GoodnightXu2002/account-niche-finder) 生成 ｜ 分析基于对话证据，不构成收益承诺
+> 生成于 <日期> ｜ 由开源 skill [account-niche-finder](https://github.com/GoodnightXu2002/selfmedia-agent-skills/tree/main/account-niche-finder) 生成 ｜ 分析基于对话证据，不构成收益承诺
 
 ## 一、你的素材画像
 （从对话提炼：优势供给清单、存量/活水标注、局限。只写有对话证据支撑的结论。）
