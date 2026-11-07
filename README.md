@@ -6,15 +6,36 @@
 
 | Skill | 一句话用途 |
 |---|---|
+| [account-niche-finder](#account-niche-finder--账号定位分析) | 对话式定位:我适合用 AI 做什么账号 |
 | [account-doctor](#account-doctor--账号诊断医生) | 用真实数据给抖音/小红书账号做体检和归因 |
 | [ai-director](#ai-director--ai-编导师傅) | 按专业编导标准诊断、改写、评分短视频内容 |
 | [benchmark-radar](#benchmark-radar--对标雷达) | 搜索和蒸馏对标账号,沉淀低粉高赞样本库 |
 | [content-planner](#content-planner--选题规划器) | 把账号定位翻译成系列结构和选题库 |
 | [wisdom-distiller](#wisdom-distiller--智慧蒸馏器) | 把历史人物变成可复用的思维模型卡 |
 
-> 配套 skill:**[account-niche-finder](https://github.com/GoodnightXu2002/account-niche-finder)**(对话式账号定位分析)单独成仓,与本合集的前 4 个构成完整流水线:定位 → 对标 → 编导 → 选题 → 诊断。
+> 前 5 个是成套设计的自媒体运营流水线:**定位 → 对标 → 编导 → 选题 → 诊断**,互相之间有协作引用;第 6 个是独立的思维工具。
 
 ---
+
+## account-niche-finder · 账号定位分析
+
+对话式的账号定位分析:通过 5-6 轮结构化对话盘点你的真实素材,分析你适合用 AI 做什么类型的内容账号(聚焦小红书图文 + 公众号),输出定位报告。
+
+**能做**:把"我该做什么账号"这个无限大的问题收敛到 2-3 个最值得验证的方向,每个方向附最低成本验证方案;报告敢排序、敢裁决——包括"你现在不该开号"这种结论。五维评分 + 动态权重,时效敏感字段(平台政策、赛道热度)强制联网核实。
+
+**不能做**:预判内容数据。没有人能保证你做哪个赛道能火,本 skill 的诚实边界是"收敛方向 + 最小成本验证",不是"算出答案"。
+
+**核心方法论**:
+- AI 生产形式,人供给内容——分析主线是你有什么 AI 替代不了的素材
+- 证据 > 自评——用户对自己的评估普遍不准,行为证据永远权重更高
+- 向往与素材冲突是主战场——拆向往(桥接/转化/戳破),不选边站
+
+**什么时候用**:
+- "我想用 AI 做个账号,不知道做什么方向,帮我分析下"
+- "我想做自媒体,纠结选什么赛道"
+- "我适合做什么类型的内容账号"
+
+约 15-20 分钟、5-6 轮对话后得到报告(含 `examples/` 里的模拟对话与示例报告参考)。
 
 ## account-doctor · 账号诊断医生
 
@@ -95,7 +116,7 @@ cp -r skills/account-doctor ~/.agents/skills/   # 换成任意 skill 名和上�
 rm -rf skills                                   # 清理临时 clone
 ```
 
-想装多个就把 `cp -r` 那行重复几次。建议自媒体 4 件套(account-doctor / ai-director / benchmark-radar / content-planner)整包装,互相之间有协作引用。
+想装多个就把 `cp -r` 那行重复几次。建议自媒体 5 件套(account-niche-finder / account-doctor / ai-director / benchmark-radar / content-planner)整包装,互相之间有协作引用。
 
 ### 方式二:转发给 coding agent 一键安装
 
@@ -113,6 +134,7 @@ rm -rf skills                                   # 清理临时 clone
 
 安装后新开会话,直接说需求即可自动触发(触发语句见上面各 skill 的"什么时候用")。例如:
 
+- 装了 account-niche-finder:"我想做自媒体,纠结选什么赛道,帮我分析下"
 - 装了 account-doctor:发一个抖音主页链接,说"帮我看看这个号还有救吗"
 - 装了 ai-director:贴一条口播稿,说"按编导标准给这条打分并改写"
 - 装了 wisdom-distiller:"蒸馏一下苏东坡,然后用他的心态分析我的裁员困境"
