@@ -1,4 +1,4 @@
-# ZCode Skills 合集
+# Selfmedia Agent Skills · 自媒体账号运营 Skill 合集
 
 个人自建的 Agent Skills 合集,沉淀自媒体账号运营与思维工具的完整工作流。每个 skill 遵循开放的 Agent Skills 格式(`SKILL.md` + `references/`),主流 coding agent 均可安装。
 
@@ -111,7 +111,7 @@
 ### 方式一:命令行安装(可只装一个)
 
 ```bash
-git clone https://github.com/GoodnightXu2002/skills.git
+git clone https://github.com/GoodnightXu2002/selfmedia-agent-skills.git
 cp -r skills/account-doctor ~/.agents/skills/   # 换成任意 skill 名和上表对应目录
 rm -rf skills                                   # 清理临时 clone
 ```
